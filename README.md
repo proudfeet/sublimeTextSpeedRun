@@ -1,0 +1,1 @@
+A quick document to get you up and running with Sublime Text.
