@@ -27,12 +27,34 @@ a {
 	text-decoration: none;
 	color: white;
 	border-bottom: 1px solid #f1c40f;
+	transition: all 0.2s;
+}
+
+a:hover,
+a:focus {
+	border-bottom: 1px solid #e67e22;
+	outline: 0;
+}
+
+.display-block {
+	display: block;
 }
 
 .wrapper {
 	width: 98%;
 	margin: 0 auto;
 	max-width: 900px;
-	font-size: 20px;
+	font-size: 21px;
 	line-height: 30px;
+	font-family: Helvetica, Arial, sans-serif;
+	text-shadow: 1px 1px 0px black;
+}
+
+li.contains-image {
+	list-style: none;
+}
+
+img.emmet-example {
+	margin: 10px auto;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
