@@ -57,4 +57,4 @@ I think by now you realize that I'm big on cutting down on writing code that you
  - At this point, we're done with our snippet for now. The next step is to save it, which follows a very specific format
  - Go ahead and save this snippet, the snippet must be saved in `Sublime Text [version] -> Packages -> User` (which you computer will most likely bring you to automatically) and **must** be saved with a `.sublime-snippet` extension, so in our example, let's save our snippet as `placeholdit.sublime-snippet`
  - Head over to an HTML file, and go ahead an use your snippet wherever appropriate
- ![Using your custom snippet](http://i.gyazo.com/ca076a2fd55bef3e7aecc087719e1067.gif)
+ ![Using your custom snippet](http://i.gyazo.com/c7fec0a36fef9c457280bfc5c15495eb.gif)
