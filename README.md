@@ -58,7 +58,8 @@ To enable your custom theme, follow the same steps as above, but instead going t
 ###Editor preferences
 Sublime allows you to do a lot of customization through the preferences files. To see a complete list of all the available options, go to `Sublime Text -> Preferences -> Settings - Default`, but don't modify any of the code in this file. Any settings you'd like to change should go into `Sublime Text -> Preferences -> Settings - User`. Given that the code you'll be writing is JSON, all your preferences you're entering must fall between the two curly-braces, you must use quotation marks where appropriate, and all of the key and value pairs (save for the very last one), **must** be followed by a comma. I've prepared some code of preferences I think are very helpful, which you can pop right into your User preferences file.
 
-`	"bold_folder_labels": true,
+{	
+	"bold_folder_labels": true,
 	"caret_style": "wide",
 	"font_size": 14,
 	"highlight_line": true,
@@ -74,7 +75,9 @@ Sublime allows you to do a lot of customization through the preferences files. T
 	"scroll_past_end": true,
 	"show_full_path": true,
 	"spell_check": true,
-	"word_wrap": true`
+	"word_wrap": true
+}
+	
 
 ##Snippets
 I think by now you realize that I'm big on cutting down on writing code that you don't have to, hence my love of Emmet. Another great feature of Sublime Text is the ability to create "snippets", which are little bits of code that you can re-use. What Emmet is doing is essentially giving you access to a host of snippets that the Emmet team noticed that they were using frequently, and we can do the same. To create a snippet click on `Tools -> New Snippet`. This should bring you to a new tab that already has some code written on it. Let's take a look to make sense of it while making our own snippet.
