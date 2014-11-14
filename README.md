@@ -76,8 +76,7 @@ Sublime allows you to do a lot of customization through the preferences files. T
 	"show_full_path": true,
 	"spell_check": true,
 	"word_wrap": true
-}
-```
+}```
 
 ##Snippets
 I think by now you realize that I'm big on cutting down on writing code that you don't have to, hence my love of Emmet. Another great feature of Sublime Text is the ability to create "snippets", which are little bits of code that you can re-use. What Emmet is doing is essentially giving you access to a host of snippets that the Emmet team noticed that they were using frequently, and we can do the same. To create a snippet click on `Tools -> New Snippet`. This should bring you to a new tab that already has some code written on it. Let's take a look to make sense of it while making our own snippet.
