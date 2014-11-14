@@ -47,6 +47,35 @@ If you ever find yourself lacking a certain syntax highlighting (for instance, y
 Go ahead and create a simple web page in your HTML file, remembering to link the CSS in the head of your HTML document (**tip**: put Emmet to use by simply typing `link` and pressing your `tab` key, and a link tag should be ready to go, just type in the name of your file in the `href` attribute). Open up your files in your editor. Right now, your two files should be in two tabs in a single pane. While this is alright, I'm personally a fan of having two panes open, particularly when editing CSS so I can reference my HTML easily. To do this, go to `View -> Layout -> Columns:2`, feel free to stick to one pane or use as many panes as you like. You can, alternatively, use the keyboard shortcut `cmnd/windows + option/alt + [number of desired panes]`. Drag your desired files into the second pane. You should now have something like looks like this
 ![Sublime Text with two panes](images/sublimeTwoPanes.png)
 
+##Small things that help you out big time
+There's a number of small things that I use in Sublime that I find help me out big time in the long run. These things might seem trivial now, but when you're knee-deep in code anything helps
+
+###Changing themes
+Personally, I'm a huge fan of dark themes in text editors - I spend at a very minimum 8 hours a day looking at a screen, and I'd like to do everything I can to maintain my (already poor) eye health. To change your theme, click `Sublime Text -> Preferences -> Color Scheme -> Color Scheme - Default` and pick a theme from there. If you'd like to download a custom theme, bring up your package control search and look for themes you'd like to install. Scotch.io has a great write-up on the [best Sublime Text themes of 2014](http://scotch.io/bar-talk/the-best-sublime-text-3-themes-of-2014) that should serve as a great starting point.
+
+To enable your custom theme, follow the same steps as above, but instead going to `Sublime Text -> Preferences -> Color Scheme` and selecting your desired theme from there.
+
+###Editor preferences
+Sublime allows you to do a lot of customization through the preferences files. To see a complete list of all the available options, go to `Sublime Text -> Preferences -> Settings - Default`, but don't modify any of the code in this file. Any settings you'd like to change should go into `Sublime Text -> Preferences -> Settings - User`. Given that the code you'll be writing is JSON, all your preferences you're entering must fall between the two curly-braces, you must use quotation marks where appropriate, and all of the key and value pairs (save for the very last one), **must** be followed by a comma. I've prepared some code of preferences I think are very helpful, which you can pop right into your User preferences file.
+
+`	"bold_folder_labels": true,
+	"caret_style": "wide",
+	"font_size": 14,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"match_brackets": true,
+	"match_brackets_angle": true,
+	"match_brackets_braces": true,
+	"match_brackets_content": true,
+	"match_brackets_square": true,
+	"open_files_in_new_window": false,
+	"scroll_past_end": true,
+	"show_full_path": true,
+	"spell_check": true,
+	"word_wrap": true`
+
 ##Snippets
 I think by now you realize that I'm big on cutting down on writing code that you don't have to, hence my love of Emmet. Another great feature of Sublime Text is the ability to create "snippets", which are little bits of code that you can re-use. What Emmet is doing is essentially giving you access to a host of snippets that the Emmet team noticed that they were using frequently, and we can do the same. To create a snippet click on `Tools -> New Snippet`. This should bring you to a new tab that already has some code written on it. Let's take a look to make sense of it while making our own snippet.
 
