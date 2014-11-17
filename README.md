@@ -102,10 +102,12 @@ If you're moving code around and your indentation goes belly-up as a result, or 
 
 As I mentioned before, we can make custom key bindings for the things we'd like to automate, so let's go ahead and do that for our re-indentation. Head back over to your `Key Bindings - User` file, and paste in `{ "keys": ["super+`"], "command": "reindent"}` after our key binding for our wrap-tag function, making sure to add a comma after the last curly brace in the wrap key binding. Our `Key Bindings - User` file should now look like this 
 
-```[
+```
+[
 	{ "keys": ["super+w"], "command": "insert_snippet", "args": { "name": "Packages/XML/long-tag.sublime-snippet" } },
 	{ "keys": ["super+`"], "command": "reindent"} 
-]```
+]
+```
 
 Give it a save, a restart, and get to re-indenting!
 
