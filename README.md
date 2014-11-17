@@ -85,11 +85,29 @@ Sublime Text supports multiple cursors, which we should definitely take advantag
 
 If you have some markup that's aligned you'd like to enter a cursor into, you can expedite this process by clicking and holding where you'd like the first cursor to appear, holding `cmnd/ctrl + alt/option` and dragging your mouse up or down to where you would like other cursors to appear.
 
+###Keyboard shortcuts
+Keyboard shortcuts are a great way to not only save yourself some time - but also save yourself from developing carpal tunnel syndrome. The less time you spend switching between mouse and keyboard the better
+
 If there's certain words or strings that you'd like to select across a document, highlight your desired string and press `cmnd/control + d` to go to the next instance of that string in your document. If there's a particular instance of that word that you would like to skip (i.e. searching for `some` would also select the `some` in `awesome`), simply press `cmnd/ctrl + k`.
 
+If you come across a scenario where you'd like to wrap some text in a tag, such as when a client gives you a piece of copy that you copy and paste into your document press `ctrl + shift + w` to wrap your selected text in a tag. By default, Sublime will wrap your text in a `<p>` tag, but not to worry - if we want to change it to a `div`, start typing and both the opening and closing tag will be updated. To add a class, press space and start typing and Sublime will drop the second cursor in the closing tag for you.
 
-###Keyboard shortcuts
+The above shortcut is dangerously easy to confuse with `cmnd/window + w`, which automatically closes the window without giving you the option to save your work. I hardly use ever *mean* to use that feature, so I've re-mapped `cmnd/window + w` to wrap tag for me. To do this, go to `Sublime Text -> Preferences -> Key Bindings - User` and add `{ "keys": ["super+w"], "command": "insert_snippet", "args": { "name": "Packages/XML/long-tag.sublime-snippet" } }` in between the two square brackets. Give it a save, restart Sublime, and you should be on your way to wrapping bliss.
 
+If you'd like to add more custom key bindings, your `Key Bindings - User` is the place to do it.
+
+You may find yourself needing to move code in and around your document as you get further along in your project. As we all know, maintaining neat code is a huge portion of having a maintainable, clean code-base. It's a huge drag when you go to move some code around only to botch your indentation you worked so hard for. Fear not, there is a way around this! If you're pasting code, when you're going to paste, instead of just pressing `cmnd/ctrl + v`, pressing `cmnd/ctrl + shift + v` will paste with correct indentation (as correct as possible, it is a machine, after all). 
+
+If you're moving code around and your indentation goes belly-up as a result, or if you've already pasted without throwing the ol' `shift` in there, there is still one last hope: highlight the text you'd like to re-indent, and go to `Edit -> Line -> Reindent`, which should do the trick for you.
+
+As I mentioned before, we can make custom key bindings for the things we'd like to automate, so let's go ahead and do that for our re-indentation. Head back over to your `Key Bindings - User` file, and paste in `{ "keys": ["super+`"], "command": "reindent"}` after our key binding for our wrap-tag function, making sure to add a comma after the last curly brace in the wrap key binding. Our `Key Bindings - User` file should now look like this 
+
+```[
+	{ "keys": ["super+w"], "command": "insert_snippet", "args": { "name": "Packages/XML/long-tag.sublime-snippet" } },
+	{ "keys": ["super+`"], "command": "reindent"} 
+]```
+
+Give it a save, a restart, and get to re-indenting!
 
 ##Snippets
 I think by now you realize that I'm big on cutting down on writing code that you don't have to, hence my love of Emmet. Another great feature of Sublime Text is the ability to create "snippets", which are little bits of code that you can re-use. What Emmet is doing is essentially giving you access to a host of snippets that the Emmet team noticed that they were using frequently, and we can do the same. To create a snippet click on `Tools -> New Snippet`. This should bring you to a new tab that already has some code written on it. Let's take a look to make sense of it while making our own snippet.
