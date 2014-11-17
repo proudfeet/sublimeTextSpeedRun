@@ -100,16 +100,16 @@ You may find yourself needing to move code in and around your document as you ge
 
 If you're moving code around and your indentation goes belly-up as a result, or if you've already pasted without throwing the ol' `shift` in there, there is still one last hope: highlight the text you'd like to re-indent, and go to `Edit -> Line -> Reindent`, which should do the trick for you.
 
-As I mentioned before, we can make custom key bindings for the things we'd like to automate, so let's go ahead and do that for our re-indentation. Head back over to your `Key Bindings - User` file, and paste in `{ "keys": ["super+`"], "command": "reindent"}` after our key binding for our wrap-tag function, making sure to add a comma after the last curly brace in the wrap key binding. Our `Key Bindings - User` file should now look like this 
+As I mentioned before, we can make custom key bindings for the things we'd like to automate, so let's go ahead and do that for our re-indentation. Head back over to your `Key Bindings - User` file, and paste in `{ "keys": ["super+option+r"], "command": "reindent"}` after our key binding for our wrap-tag function, making sure to add a comma after the last curly brace in the wrap key binding. Our `Key Bindings - User` file should now look like this 
 
 ```
 [
 	{ "keys": ["super+w"], "command": "insert_snippet", "args": { "name": "Packages/XML/long-tag.sublime-snippet" } },
-	{ "keys": ["super+`"], "command": "reindent"} 
+	{ "keys": ["super+option+r"], "command": "reindent"} 
 ]
 ```
 
-Give it a save, a restart, and get to re-indenting!
+This will re-map `cmnd/window + option/alt + r` to re-indent our code. Give it a save, a restart, and get to re-indenting!
 
 ##Snippets
 I think by now you realize that I'm big on cutting down on writing code that you don't have to, hence my love of Emmet. Another great feature of Sublime Text is the ability to create "snippets", which are little bits of code that you can re-use. What Emmet is doing is essentially giving you access to a host of snippets that the Emmet team noticed that they were using frequently, and we can do the same. To create a snippet click on `Tools -> New Snippet`. This should bring you to a new tab that already has some code written on it. Let's take a look to make sense of it while making our own snippet.
