@@ -78,6 +78,19 @@ Sublime allows you to do a lot of customization through the preferences files. T
 	"word_wrap": true
 }```
 
+A note about word wrap: you may want to disable this feature if working with a language that renders whitespace
+
+###Working with multiple cursors
+Sublime Text supports multiple cursors, which we should definitely take advantage of when applicable. To simply add another cursor to our document, simply click where you would like the first cursor to appear, hold `cmnd/control` and click where you would like your next cursor to appear, repeat as many times as necessary and type as normal. 
+
+If you have some markup that's aligned you'd like to enter a cursor into, you can expedite this process by clicking and holding where you'd like the first cursor to appear, holding `cmnd/ctrl + alt/option` and dragging your mouse up or down to where you would like other cursors to appear.
+
+If there's certain words or strings that you'd like to select across a document, highlight your desired string and press `cmnd/control + d` to go to the next instance of that string in your document. If there's a particular instance of that word that you would like to skip (i.e. searching for `some` would also select the `some` in `awesome`), simply press `cmnd/ctrl + k`.
+
+
+###Keyboard shortcuts
+
+
 ##Snippets
 I think by now you realize that I'm big on cutting down on writing code that you don't have to, hence my love of Emmet. Another great feature of Sublime Text is the ability to create "snippets", which are little bits of code that you can re-use. What Emmet is doing is essentially giving you access to a host of snippets that the Emmet team noticed that they were using frequently, and we can do the same. To create a snippet click on `Tools -> New Snippet`. This should bring you to a new tab that already has some code written on it. Let's take a look to make sense of it while making our own snippet.
 
