@@ -138,3 +138,5 @@ I think by now you realize that I'm big on cutting down on writing code that you
 - Go ahead and save this snippet, the snippet must be saved in `Sublime Text [version] -> Packages -> User` (which you computer will most likely bring you to automatically) and **must** be saved with a `.sublime-snippet` extension, so in our example, let's save our snippet as `placeholdit.sublime-snippet`
 - Head over to an HTML file, and go ahead an use your snippet wherever appropriate
 - ![Using your custom snippet](http://i.gyazo.com/c7fec0a36fef9c457280bfc5c15495eb.gif)
+- A quick note about snippets: certain characters will throw your snippet effectively down the tubes, such as `$`. To circumvent this, you can escape these characters by preceeding them with a backslash
+As an example: `$(".box").click(function(){});` would not work as a snippet. However, by simply adding a `\` before the `$` so that our snippet now looks like `\$(".box")`
