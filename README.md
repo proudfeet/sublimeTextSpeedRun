@@ -58,7 +58,8 @@ To enable your custom theme, follow the same steps as above, but instead going t
 ###Editor preferences
 Sublime allows you to do a lot of customization through the preferences files. To see a complete list of all the available options, go to `Sublime Text -> Preferences -> Settings - Default`, but don't modify any of the code in this file. Any settings you'd like to change should go into `Sublime Text -> Preferences -> Settings - User`. Given that the code you'll be writing is JSON, all your preferences you're entering must fall between the two curly-braces, you must use quotation marks where appropriate, and all of the key and value pairs (save for the very last one), **must** be followed by a comma. I've prepared some code of preferences I think are very helpful, which you can pop right into your User preferences file.
 
-```{	
+```
+{	
 	"bold_folder_labels": true,
 	"caret_style": "wide",
 	"font_size": 14,
@@ -76,7 +77,8 @@ Sublime allows you to do a lot of customization through the preferences files. T
 	"show_full_path": true,
 	"spell_check": true,
 	"word_wrap": true
-}```
+}
+```
 
 A note about word wrap: you may want to disable this feature if working with a language that renders whitespace
 
