@@ -94,6 +94,20 @@ If you come across a scenario where you'd like to wrap some text in a tag, such 
 
 The above shortcut is dangerously easy to confuse with `cmnd/window + w`, which automatically closes the window without giving you the option to save your work. I hardly use ever *mean* to use that feature, so I've re-mapped `cmnd/window + w` to wrap tag for me. To do this, go to `Sublime Text -> Preferences -> Key Bindings - User` and add `{ "keys": ["super+w"], "command": "insert_snippet", "args": { "name": "Packages/XML/long-tag.sublime-snippet" } }` in between the two square brackets. Give it a save, restart Sublime, and you should be on your way to wrapping bliss.
 
+####Wrapping tags on hardcore mode
+Sometimes you have a small piece of text that you'd like to wrap in a series of nested tags. For example, you might have `This is some text I need to wrap`, in a link, in an h1, in the header within the wrapper div. Obviously, we could use Emmet to do some of this scaffolding for us by typing `div.wrapper>header>h1>a + tab`, copying our text and then moving it into the desired place, but if we can get our editor to do a bit of the work *for us* then when wouldn't we, right?
+
+To do what I call wrapping in "hardcore mode" (I wish this was a thing), highlight the text you'd like to wrap. Next, press `ctrl + w`, and you should see a small dialog box open up at the bottom of your editor. From here, we can use our Emmet tricks to do some of the wrapping for us. So to achieve:
+```
+<div class="wrapper">
+	<header>
+		<h1><a href="http://www.google.ca">This is some text I need to wrap</a></h1>
+	</header>
+</div>
+```
+
+Enter in `.wrapper>header>h1>a[href="http://www.google.ca"]` and hit enter. Congrats, you're hardcore now.
+
 If you'd like to add more custom key bindings, your `Key Bindings - User` is the place to do it.
 
 You may find yourself needing to move code in and around your document as you get further along in your project. As we all know, maintaining neat code is a huge portion of having a maintainable, clean code-base. It's a huge drag when you go to move some code around only to botch your indentation you worked so hard for. Fear not, there is a way around this! If you're pasting code, when you're going to paste, instead of just pressing `cmnd/ctrl + v`, pressing `cmnd/ctrl + shift + v` will paste with correct indentation (as correct as possible, it is a machine, after all). 
