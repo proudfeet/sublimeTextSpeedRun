@@ -158,3 +158,16 @@ I think by now you realize that I'm big on cutting down on writing code that you
 - A quick note about snippets: certain characters will throw your snippet effectively down the tubes, such as `$`. To circumvent this, you can escape these characters by preceeding them with a backslash
 	- Note that this does not apply to tab indexes within your snippet, which must follow the specific syntax of `${[number]:[word]}`
 - As an example: `$(".box").click(function(){});` would not work as a snippet. However, by simply adding a `\` before the `$` so that our snippet now looks like `\$(".box")`
+
+##We need to talk about Emmet...
+While Emmet is a great tool for scaffolding code quickly, there are a few things that I had always *wished* it would have. For example, I noticed that image tags wouldn't come with alt tags, which I would then have to manually add. It's not the hugest inconvenience, but the point of these tools is to automate these kinds of things, so it was always nagging at me in the back of my head.
+
+The obvious solution would be to create my own image tag snippet, and use that instead. The problem with that, is that it's both redundant and it can also create issues with the snippet not triggering at all (this can sometimes happen when you're trying to override Emmet snippets with your own).
+
+The next obvious solution would be to edit the Emmet snippets themselves, which seems like the most practical solution. To do this, we're going to need to turn to terminal. It's also going to help to create a symlink for Sublime in our terminal, [a great blog post for how to do so can be found here by my friend Wisam](http://wzaghal.wordpress.com/2014/05/19/how-to-launch-sublime-text-from-terminal/).
+
+Once you've got that set up, head to your terminal and run `subl /Library/"Application Support"/"Sublime Text [version]"/Packages/Emmet/emmet/snippets.json`, which should open this file up in your editor.
+
+This is where, if you'd like to, you should make all your changes to your existing Emmet snippets. The syntax for these follows exactly the same syntax as when we made our own custom snippets beforehand, the only difference being that we can set multiple things as triggers. For example, we can see that on line 648 we have `a:mail` to trigger `<a href=\"mailto:|\"`, but we can make this more efficient by setting it simply to `mail`. 
+
+I'm hesitant to completely remove the functionality of `a:mail`, because something else in your `snippet.json` file could be dependent upon it. So to circumvent this, we're going to assign multiple triggers to it, which we do by simply adding `|[alternative trigger]`. Now, line 648 should look like `"a:mail|mail": "<a href=\"mailto:|\">",`
